@@ -6,12 +6,12 @@ const WIDTH = 800;
 const HEIGHT = 600;
 
 class Game extends React.Component {  
-    render() {    
-        return (      
-            <div>        
-                <div className="Board" style={{ width: WIDTH, height: HEIGHT }}></div>      
-            </div>    );  
+    constructor() {    
+        super();    
+        this.rows = HEIGHT / CELL_SIZE;    
+        this.cols = WIDTH / CELL_SIZE;    
+        this.board = this.makeEmptyBoard();  
     }
 }
 
-export default Game
+export default Game;

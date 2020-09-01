@@ -1,17 +1,16 @@
 import React from 'react';
-
-import Game from './Game'
-import logo from './logo.svg';
+import BoardContainer from './containers/BoardContainer';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <Game />
+const App = () => (
+  <div className="App">
+    <div className="App-header">
+      <h2>Conway's Game of Life</h2>
     </div>
-  );
-}
+    <div>
+      <BoardContainer/>
+    </div>
+  </div>
+)
 
 export default App;

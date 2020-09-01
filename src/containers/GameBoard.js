@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Board from '../components/Board';
 
-class BoardContainer extends Component {
+class GameBoard extends Component {
   constructor() {
     super();
 
@@ -104,6 +104,7 @@ class BoardContainer extends Component {
     }, this.redraw);
   }
 
+  // check a cell
   checkCell(x, y) {
     let height = this.state.height;
     let width = this.state.width
@@ -114,6 +115,7 @@ class BoardContainer extends Component {
     }
   }
 
+  // pause functionality
   handlePause() {
     if (!this.state.interval) {
       var interval = setInterval(this.update, this.state.speed);
@@ -262,4 +264,4 @@ class BoardContainer extends Component {
   }
 }
 
-export default BoardContainer;
+export default GameBoard;

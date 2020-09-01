@@ -1,4 +1,5 @@
 import React from 'react';
+import './Controls.css';
 
 const Controls = (props) => (
     <div className="button-row">
